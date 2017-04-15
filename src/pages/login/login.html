@@ -1,0 +1,47 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding class="background">
+
+  <ion-row>
+    <ion-col class="logocol">
+      <img class="logo" src="build/img/pombalembrancas.png">
+    </ion-col>
+  </ion-row>
+
+  <button ion-button full ion-button icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>
+  <button ion-button full color="danger" ion-button icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>
+
+
+    <ion-row>
+      <ion-col col>
+        <button ion-button class="buttonfull" full color="light" [navPush]="feedPage">Cadastrar</button>
+      </ion-col>
+      <ion-col col>
+        <button ion-button class="buttonfull" full color="light" [navPush]="logarPage">Logar</button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <button ion-button clear full color="white" [navPush]="saibaPage">Saiba Mais</button>
+      </ion-col>
+    </ion-row>
+
+  <ion-row>
+    <ion-col class="textocol">
+      <p>Para se cadastrar você precisa aceitar nossos
+        <span [navPush]="termosPage">Termos de Serviço</span> e <span [navPush]="politicaPage">Política de Privacidade</span>
+      </p>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

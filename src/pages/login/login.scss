@@ -1,0 +1,42 @@
+page-login {
+  .background{
+    background: color($colors,lembrancas, base);
+    padding-top: 12vw;
+    background-image: url(../build/img/lembrancas4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 60vw black;
+  }
+
+  .logo{
+    width:50vw;
+    height:50vw;
+    background-color: transparent;
+    color:transparent;
+
+  }
+
+  .logocol{
+    text-align: center;
+    margin-top: 10vw;
+    margin-bottom: 20vw;
+  }
+
+  .textocol{
+    color:white;
+    text-align:center;
+  }.textocol span{
+    font-weight: bold;
+  }
+
+  .buttonfull{
+     border-right-width: 0;
+     border-left-width: 0;
+     border:1px solid white;
+     color: white;
+     background-color: transparent;
+     box-shadow:none;
+  }
+
+}
