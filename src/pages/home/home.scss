@@ -1,0 +1,57 @@
+page-home {
+  .background{
+    background-color: #4682B4;
+  }
+
+  .header button{
+    color:white;
+  }
+
+  .header::after {
+    background-image: none;
+  }
+
+  .toolbar {
+    .toolbar-background {
+        background-color: #4682B4;
+    }
+  }
+
+  .divfoto{
+    text-align: center;
+  }
+
+  .foto{
+    border-radius:30vw;
+    height:40vw;
+    width:40vw;
+    border:2px solid #ffffff;
+    background-image:url(../build/img/lembrancas4.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .toolbar-title{
+    color:white;
+    margin-left:23vw;
+  }
+
+  .buttonconfig{
+    border-radius:5px;
+    margin-bottom:4vw;
+  }
+
+  .rowconfig{
+    background-color: #ffffff;
+    width:100%;
+    padding:2vw;
+  }
+
+  .colconfig{
+    border-right:2px solid #4682B4;
+  }
+
+
+
+}

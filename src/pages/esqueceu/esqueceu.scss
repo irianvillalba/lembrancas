@@ -1,0 +1,47 @@
+page-esqueceu {
+  .background{
+    background-image: url(../build/img/lembrancas4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 60vw black;
+  }
+
+  .header button{
+    color:white;
+  }
+
+  .toolbar {
+    .toolbar-background {
+        background: transparent;
+    }
+  }
+
+  .header::after {
+  background-image: none;
+  }
+
+  .toolbar-title{
+    color:white;
+  }
+
+  .top{
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  }
+
+  .bottom{
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  }
+
+  .buttonrad{
+  border-radius:5px;
+  }
+
+  .texto{
+    color:white;
+    font-size:6vw;
+    text-align:center;
+  }
+}
