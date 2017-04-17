@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Feed } from '../pages/feed/feed';
@@ -13,6 +14,10 @@ import { Saiba } from '../pages/saiba/saiba';
 import { Politica } from '../pages/politica/politica';
 import { Logar } from '../pages/logar/logar';
 import { Esqueceu } from '../pages/esqueceu/esqueceu';
+import { Config } from '../pages/config/config';
+import { Ajuda } from '../pages/ajuda/ajuda';
+import { Timeline } from '../pages/timeline/timeline';
+import { Senhamodal } from '../pages/senhamodal/senhamodal';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,10 @@ import { Esqueceu } from '../pages/esqueceu/esqueceu';
     Politica,
     Logar,
     Esqueceu,
+    Config,
+    Ajuda,
+    Timeline,
+    Senhamodal,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +50,10 @@ import { Esqueceu } from '../pages/esqueceu/esqueceu';
     Politica,
     Logar,
     Esqueceu,
+    Config,
+    Ajuda,
+    Timeline,
+    Senhamodal,
   ],
   providers: [
     StatusBar,

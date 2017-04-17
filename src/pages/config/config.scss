@@ -1,0 +1,44 @@
+page-config {
+  .background{
+    background-color: #008080;
+    box-shadow: inset 0px 0px 60vw black;
+  }
+
+  .header button{
+    color:white;
+  }
+
+  .header::after {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+  }
+
+  .toolbar {
+    .toolbar-background {
+        background-color: transparent;
+        border: none;
+    }.toolbar::after{
+      border:none;
+    }
+  }
+
+  .divfoto{
+    text-align: center;
+  }
+
+  .foto{
+    border-radius:30vw;
+    height:40vw;
+    width:40vw;
+    border:2px solid #ffffff;
+    background-image:url(../img/gus2016.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .toolbar-title{
+    color:white;
+  }
+}

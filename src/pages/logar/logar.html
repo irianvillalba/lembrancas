@@ -13,29 +13,32 @@
 
 <ion-content padding class="feed, background">
 
-<ion-row align-itens-center>
-  <ion-col>
+<ion-row no-padding>
+  <ion-col col col-4 no-padding>
     <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>
   </ion-col>
-  <ion-col>
+  <ion-col col col-4 offset-1 no-padding>
     <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>
   </ion-col>
 </ion-row>
+
   <ion-list>
     <ion-item class="top">
       <ion-input placeholder="E-mail" clearInput></ion-input>
     </ion-item>
-    <ion-item class="bottom">
 
-      <ion-input placeholder="Senha" type="isPasswordFieldType ? 'password' : 'text'"></ion-input>
-      <button (click)="togglePasswordFieldType()"><ion-icon [name]="isPasswordFieldType ? 'eye' : 'eye-off'" class="acd-eye-icon"></ion-icon>
-      </button>
+    <ion-item class="bottom">
+      <ion-input placeholder="Senha" [type]="isPasswordFieldType ? 'password' : 'text'"></ion-input>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="togglePasswordFieldType()"><ion-icon [name]="isPasswordFieldType ? 'eye' : 'eye-off'"></ion-icon>
+        </button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
 
   <ion-row>
     <ion-col>
-      <button ion-button class="buttonrad" full large color="danger" (click)="getLogar()">Entrar</button>
+      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>
     </ion-col>
   </ion-row>
 

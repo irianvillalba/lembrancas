@@ -29163,8 +29163,98 @@ ion-navbar.toolbar {
   }
 }
 
+.background-menu {
+  background-color: #003366;
+  box-shadow: inset 0px 0px 60vw black;
+}
+
+.menuitemtopo {
+  background-color: transparent;
+  color: white;
+  opacity: 0.9;
+  margin-top: 20vw;
+  text-align: left;
+}
+
+.menuitemtopo .button-inner {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.menuitem {
+  background-color: transparent;
+  color: white;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.menuitem .button-inner {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.menuitembot {
+  background-color: transparent;
+  color: white;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+}
+
+.menuitembot .button-inner {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+page-config .background {
+  background-color: #008080;
+  box-shadow: inset 0px 0px 60vw black;
+}
+
+page-config .header button {
+  color: white;
+}
+
+page-config .header::after {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+
+page-config .toolbar .toolbar-background {
+  background-color: transparent;
+  border: none;
+}
+
+page-config .toolbar .toolbar::after {
+  border: none;
+}
+
+page-config .divfoto {
+  text-align: center;
+}
+
+page-config .foto {
+  border-radius: 30vw;
+  height: 40vw;
+  width: 40vw;
+  border: 2px solid #ffffff;
+  background-image: url(../img/gus2016.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+page-config .toolbar-title {
+  color: white;
+}
+
 page-esqueceu .background {
-  background-image: url(../build/img/lembrancas4.jpg);
+  background-image: url(../img/lembrancas4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29208,7 +29298,7 @@ page-esqueceu .texto {
 }
 
 page-feed .background {
-  background-image: url(../build/img/lembrancas4.jpg);
+  background-image: url(../img/lembrancas4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29246,7 +29336,8 @@ page-feed .buttonrad {
 }
 
 page-home .background {
-  background-color: #4682B4;
+  background-color: #008080;
+  box-shadow: inset 0px 0px 60vw black;
 }
 
 page-home .header button {
@@ -29255,10 +29346,17 @@ page-home .header button {
 
 page-home .header::after {
   background-image: none;
+  background-color: transparent;
+  border: none;
 }
 
 page-home .toolbar .toolbar-background {
-  background-color: #4682B4;
+  background-color: transparent;
+  border: none;
+}
+
+page-home .toolbar .toolbar::after {
+  border: none;
 }
 
 page-home .divfoto {
@@ -29270,7 +29368,7 @@ page-home .foto {
   height: 40vw;
   width: 40vw;
   border: 2px solid #ffffff;
-  background-image: url(../build/img/lembrancas4.jpg);
+  background-image: url(../img/gus2016.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -29278,7 +29376,7 @@ page-home .foto {
 
 page-home .toolbar-title {
   color: white;
-  margin-left: 23vw;
+  background-color: transparent;
 }
 
 page-home .buttonconfig {
@@ -29297,7 +29395,7 @@ page-home .colconfig {
 }
 
 page-logar .background {
-  background-image: url(../build/img/lembrancas4.jpg);
+  background-image: url(../img/lembrancas4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29342,7 +29440,7 @@ page-logar .texto {
 page-login .background {
   background: #FFD700;
   padding-top: 12vw;
-  background-image: url(../build/img/lembrancas4.jpg);
+  background-image: url(../img/lembrancas4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

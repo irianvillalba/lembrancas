@@ -16,19 +16,92 @@
     <ion-col class="divfoto">
       <div class="foto">
       </div>
-      <h2>Nome</h2>
+      <h3>Gustavo Andrade</h3>
     </ion-col>
     <ion-col>
     </ion-col>
   </ion-row>
 
   <ion-row class="rowconfig">
-    <button ion-button icon-left full large color="light" class="buttonconfig"><ion-icon name="settings"></ion-icon> Configuracoes</button>
+    <button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>
     <ion-col class="colconfig">
-      <button ion-button clear full color="light">100 Enviadas</button>
+      <button ion-button clear small block [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()">100 Enviadas</button>
     </ion-col>
     <ion-col>
-      <button ion-button clear full color="light">50 Recebidas</button>
+      <button ion-button clear small block [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()">50 Recebidas</button>
     </ion-col>
   </ion-row>
+
+  <ion-list>
+    <ion-card>
+      <img src="./img/card1.jpg">
+      <ion-card-content>
+        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
+        <ion-item no-padding>
+          <ion-avatar item-left>
+            <img src="./img/gus2016.jpg">
+          </ion-avatar>
+          <p>Gustavo Andrade</p>
+        </ion-item>
+        <ion-item no-padding>
+            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
+            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="./img/card1.jpg">
+      <ion-card-content>
+        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
+        <ion-item no-padding>
+          <ion-avatar item-left>
+            <img src="./img/gus2016.jpg">
+          </ion-avatar>
+          <p>Gustavo Andrade</p>
+        </ion-item>
+        <ion-item no-padding>
+            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
+            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="./img/card1.jpg">
+      <ion-card-content>
+        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
+        <ion-item no-padding>
+          <ion-avatar item-left>
+            <img src="./img/gus2016.jpg">
+          </ion-avatar>
+          <p>Gustavo Andrade</p>
+        </ion-item>
+        <ion-item no-padding>
+            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
+            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="./img/card1.jpg">
+      <ion-card-content>
+        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
+        <ion-item no-padding>
+          <ion-avatar item-left>
+            <img src="./img/gus2016.jpg">
+          </ion-avatar>
+          <p>Gustavo Andrade</p>
+        </ion-item>
+        <ion-item no-padding>
+            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
+            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-list>
+
+
 </ion-content>

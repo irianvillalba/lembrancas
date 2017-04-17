@@ -33,7 +33,7 @@ export class Logar {
     this.navCtrl.setRoot(HomePage);
   }
 
-  isPasswordFieldType = false;
+  isPasswordFieldType : boolean = false;
   togglePasswordFieldType():void{
     this.isPasswordFieldType = !this.isPasswordFieldType;
   }

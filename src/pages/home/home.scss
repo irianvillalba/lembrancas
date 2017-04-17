@@ -1,6 +1,7 @@
 page-home {
   .background{
-    background-color: #4682B4;
+    background-color: #008080;
+    box-shadow: inset 0px 0px 60vw black;
   }
 
   .header button{
@@ -9,11 +10,16 @@ page-home {
 
   .header::after {
     background-image: none;
+    background-color: transparent;
+    border: none;
   }
 
   .toolbar {
     .toolbar-background {
-        background-color: #4682B4;
+        background-color: transparent;
+        border: none;
+    }.toolbar::after{
+      border:none;
     }
   }
 
@@ -26,7 +32,7 @@ page-home {
     height:40vw;
     width:40vw;
     border:2px solid #ffffff;
-    background-image:url(../build/img/lembrancas4.jpg);
+    background-image:url(../img/gus2016.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -34,7 +40,7 @@ page-home {
 
   .toolbar-title{
     color:white;
-    margin-left:23vw;
+    background-color: transparent;
   }
 
   .buttonconfig{
