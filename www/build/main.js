@@ -45165,6 +45165,7 @@ var Feed = (function () {
         this.loginPage = __WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* Login */];
         this.homePage = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
         this.logarPage = __WEBPACK_IMPORTED_MODULE_4__logar_logar__["a" /* Logar */];
+        this.isSenhaView = true;
     }
     Feed.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Feed');
@@ -45172,16 +45173,20 @@ var Feed = (function () {
     Feed.prototype.getLogar = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
     };
+    Feed.prototype.toggleSenhaView = function () {
+        this.isSenhaView = !this.isSenhaView;
+    };
     return Feed;
 }());
 Feed = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" type="password" clearInput></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
+        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
 ], Feed);
 
+var _a, _b;
 //# sourceMappingURL=feed.js.map
 
 /***/ }),
@@ -45221,7 +45226,7 @@ var Logar = (function () {
         this.navParams = navParams;
         this.esqueceuPage = __WEBPACK_IMPORTED_MODULE_3__esqueceu_esqueceu__["a" /* Esqueceu */];
         this.feedPage = __WEBPACK_IMPORTED_MODULE_4__feed_feed__["a" /* Feed */];
-        this.isPasswordFieldType = false;
+        this.isSenhaView = true;
     }
     Logar.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Logar');
@@ -45229,15 +45234,15 @@ var Logar = (function () {
     Logar.prototype.getLogar = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
     };
-    Logar.prototype.togglePasswordFieldType = function () {
-        this.isPasswordFieldType = !this.isPasswordFieldType;
+    Logar.prototype.toggleSenhaView = function () {
+        this.isSenhaView = !this.isSenhaView;
     };
     return Logar;
 }());
 Logar = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isPasswordFieldType ? \'password\' : \'text\'"></ion-input>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="togglePasswordFieldType()"><ion-icon [name]="isPasswordFieldType ? \'eye\' : \'eye-off\'"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
+        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Logar);
@@ -56868,7 +56873,7 @@ var Ajuda = (function () {
 Ajuda = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-ajuda',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/'<!--\n  Generated template for the Ajuda page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>ajuda</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/,
+        selector: 'page-ajuda',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/'<!--\n\n  Generated template for the Ajuda page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ajuda</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Ajuda);
@@ -56920,7 +56925,7 @@ var Config = (function () {
 Config = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n  Generated template for the Config page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="header">\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      Configurações\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content class="background">\n  <ion-row>\n    <ion-col>\n    </ion-col>\n    <ion-col class="divfoto">\n      <div class="foto">\n      </div>\n      <h3>Gustavo Andrade</h3>\n    </ion-col>\n    <ion-col>\n    </ion-col>\n  </ion-row>\n\n  <ion-row full>\n    <ion-col>\n      <ion-list>\n        <ion-item>\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Data de Nascimento</ion-label>\n          <ion-select>\n            <ion-option selected="true">Dia</ion-option>\n          </ion-select>\n          <ion-select>\n            <ion-option selected="true">Mês</ion-option>\n          </ion-select>\n          <ion-select>\n            <ion-option selected="true">Ano</ion-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-segment color="dark">\n            <ion-segment-button value="Homem">Homem</ion-segment-button>\n            <ion-segment-button value="Mulher">Mulher</ion-segment-button>\n          </ion-segment>\n        </ion-item>\n          <button ion-button outline block color="white">Alterar Foto de Perfil</button>\n          <button ion-button outline block color="white" (click)="showModal()">Alterar Senha</button>\n      </ion-list>\n    </ion-col>\n  </ion-row>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
+        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n\n  Generated template for the Config page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Configurações\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row full>\n\n    <ion-col>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Data de Nascimento</ion-label>\n\n          <ion-select>\n\n            <ion-option selected="true">Dia</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Mês</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Ano</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-segment color="dark">\n\n            <ion-segment-button value="Homem">Homem</ion-segment-button>\n\n            <ion-segment-button value="Mulher">Mulher</ion-segment-button>\n\n          </ion-segment>\n\n        </ion-item>\n\n          <button ion-button outline block color="white">Alterar Foto de Perfil</button>\n\n          <button ion-button outline block color="white" (click)="showModal()">Alterar Senha</button>\n\n      </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
 ], Config);
@@ -57098,6 +57103,7 @@ var Senhamodal = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
+        this.isSenhaView = true;
     }
     Senhamodal.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Senhamodal');
@@ -57105,12 +57111,15 @@ var Senhamodal = (function () {
     Senhamodal.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
+    Senhamodal.prototype.toggleSenhaView = function () {
+        this.isSenhaView = !this.isSenhaView;
+    };
     return Senhamodal;
 }());
 Senhamodal = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n  Generated template for the Senhamodal page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Alterar Senha</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only small clear (click)="closeModal()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-input placeholder="Senha Anterior" type="password"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input placeholder="Nova Senha" type="password"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input placeholder="Confirmar Nova Senha" type="password"></ion-input>\n    </ion-item>\n    <ion-item>\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
+        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n\n  Generated template for the Senhamodal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Alterar Senha</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only small clear (click)="closeModal()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-input placeholder="Senha antiga" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ViewController */]])
 ], Senhamodal);
@@ -57200,7 +57209,7 @@ var Timeline = (function () {
 Timeline = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n  Generated template for the Timeline page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>timeline</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
+        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n\n  Generated template for the Timeline page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>timeline</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Timeline);

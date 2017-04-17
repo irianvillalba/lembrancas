@@ -26,13 +26,11 @@
     <ion-item class="top">
       <ion-input placeholder="E-mail" clearInput></ion-input>
     </ion-item>
-
     <ion-item class="bottom">
-      <ion-input placeholder="Senha" [type]="isPasswordFieldType ? 'password' : 'text'"></ion-input>
-      <ion-buttons end>
-        <button ion-button icon-only (click)="togglePasswordFieldType()"><ion-icon [name]="isPasswordFieldType ? 'eye' : 'eye-off'"></ion-icon>
-        </button>
-      </ion-buttons>
+      <ion-input placeholder="Senha" [type]="isSenhaView ? 'password' : 'text'">
+      </ion-input>
+      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? 'eye' : 'eye-off'"></ion-icon>
+      </button>
     </ion-item>
   </ion-list>
 

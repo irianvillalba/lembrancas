@@ -33,9 +33,9 @@ export class Logar {
     this.navCtrl.setRoot(HomePage);
   }
 
-  isPasswordFieldType : boolean = false;
-  togglePasswordFieldType():void{
-    this.isPasswordFieldType = !this.isPasswordFieldType;
+  isSenhaView : boolean = true;
+  toggleSenhaView():void{
+    this.isSenhaView = !this.isSenhaView;
   }
 
 }

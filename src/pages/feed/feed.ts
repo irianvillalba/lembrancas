@@ -34,4 +34,9 @@ export class Feed {
     this.navCtrl.setRoot(HomePage);
   }
 
+  isSenhaView : boolean = true;
+  toggleSenhaView():void{
+    this.isSenhaView = !this.isSenhaView;
+  }
+
 }

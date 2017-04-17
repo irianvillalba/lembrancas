@@ -21,14 +21,26 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-input placeholder="Senha Anterior" type="password"></ion-input>
+      <ion-input placeholder="Senha antiga" [type]="isSenhaView ? 'password' : 'text'">
+      </ion-input>
+      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? 'eye' : 'eye-off'"></ion-icon>
+      </button>
     </ion-item>
+
     <ion-item>
-      <ion-input placeholder="Nova Senha" type="password"></ion-input>
+      <ion-input placeholder="Senha nova" [type]="isSenhaView ? 'password' : 'text'">
+      </ion-input>
+      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? 'eye' : 'eye-off'"></ion-icon>
+      </button>
     </ion-item>
+
     <ion-item>
-      <ion-input placeholder="Confirmar Nova Senha" type="password"></ion-input>
+      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView ? 'password' : 'text'">
+      </ion-input>
+      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? 'eye' : 'eye-off'"></ion-icon>
+      </button>
     </ion-item>
+
     <ion-item>
       <button ion-button block color="danger">Salvar Nova Senha</button>
     </ion-item>
