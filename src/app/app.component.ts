@@ -3,8 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
+import { Ajuda } from '../pages/ajuda/ajuda';
+import { Timeline } from '../pages/timeline/timeline';
+
 
 
 ;@Component({
@@ -12,6 +17,11 @@ import { Login } from '../pages/login/login';
 })
 export class MyApp {
   rootPage:any = Login;
+  homePage = HomePage;
+  ajudaPage = Ajuda;
+  timePage = Timeline;
+  loginPage = Login;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -21,4 +31,9 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  openPage(p) {
+    this.rootPage = p;
+  }
+
 }

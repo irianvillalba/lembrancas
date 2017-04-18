@@ -1,6 +1,10 @@
 <ion-menu [content]="menu">
-  <ion-content>
-
+  <ion-content class="background-menu">
+      <button ion-button icon-left block clear menuClose color="white" class="menuitemtopo" (click)="openPage(homePage)" ><ion-icon name="person"></ion-icon>Perfil</button>
+      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(timePage)"><ion-icon name="people"></ion-icon>Timeline</button>
+      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage()"><ion-icon name="cart"></ion-icon>Carrinho de Compras</button>
+      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(ajudaPage)"><ion-icon name="help"></ion-icon>Ajuda</button>
+      <button ion-button icon-left block clear menuClose color="white" class="menuitembot" (click)="openPage(loginPage)"><ion-icon name="close-circle"></ion-icon>Sair</button>
   </ion-content>
 </ion-menu>
 

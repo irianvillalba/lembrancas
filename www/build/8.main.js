@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 310:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__saiba__ = __webpack_require__(313);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SaibaModule", function() { return SaibaModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__esqueceu__ = __webpack_require__(108);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EsqueceuModule", function() { return EsqueceuModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SaibaModule = (function () {
-    function SaibaModule() {
+var EsqueceuModule = (function () {
+    function EsqueceuModule() {
     }
-    return SaibaModule;
+    return EsqueceuModule;
 }());
-SaibaModule = __decorate([
+EsqueceuModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__saiba__["a" /* Saiba */],
+            __WEBPACK_IMPORTED_MODULE_2__esqueceu__["a" /* Esqueceu */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__saiba__["a" /* Saiba */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__esqueceu__["a" /* Esqueceu */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__saiba__["a" /* Saiba */]
+            __WEBPACK_IMPORTED_MODULE_2__esqueceu__["a" /* Esqueceu */]
         ]
     })
-], SaibaModule);
+], EsqueceuModule);
 
-//# sourceMappingURL=saiba.module.js.map
+//# sourceMappingURL=esqueceu.module.js.map
 
 /***/ })
 
