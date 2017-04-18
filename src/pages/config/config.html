@@ -41,15 +41,7 @@
         </ion-item>
         <ion-item>
           <ion-label>Data de Nascimento</ion-label>
-          <ion-select>
-            <ion-option selected="true">Dia</ion-option>
-          </ion-select>
-          <ion-select>
-            <ion-option selected="true">Mês</ion-option>
-          </ion-select>
-          <ion-select>
-            <ion-option selected="true">Ano</ion-option>
-          </ion-select>
+          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-segment color="dark">
@@ -57,8 +49,7 @@
             <ion-segment-button value="Mulher">Mulher</ion-segment-button>
           </ion-segment>
         </ion-item>
-          <button ion-button outline block color="white">Alterar Foto de Perfil</button>
-          <button ion-button outline block color="white" (click)="showModal()">Alterar Senha</button>
+          <button ion-button block color="danger">Salvar Configurações</button>
       </ion-list>
     </ion-col>
   </ion-row>

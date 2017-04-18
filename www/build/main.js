@@ -22568,14 +22568,14 @@ function dispatch(timeStamp, r, w) {
 /* unused harmony reexport Menu */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_119__components_menu_menu_close__ = __webpack_require__(163);
 /* unused harmony reexport MenuClose */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_17__components_menu_menu_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_17__components_menu_menu_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_120__components_menu_menu_toggle__ = __webpack_require__(164);
 /* unused harmony reexport MenuToggle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__components_menu_menu_types__ = __webpack_require__(263);
 /* unused harmony reexport MenuType */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__components_modal_modal__ = __webpack_require__(168);
 /* unused harmony reexport Modal */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_18__components_modal_modal_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_18__components_modal_modal_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__components_nav_nav__ = __webpack_require__(78);
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_124__components_nav_nav_pop__ = __webpack_require__(76);
@@ -22679,7 +22679,7 @@ function dispatch(timeStamp, r, w) {
 /* unused harmony reexport setupConfig */
 /* unused harmony reexport ConfigToken */
 /* unused harmony reexport DomController */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* unused harmony reexport Haptic */
 /* unused harmony reexport DeepLinker */
@@ -40362,19 +40362,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.buttonClicked = false;
+        this.buttonClicked1 = false;
+        this.buttonClicked2 = false;
     }
     HomePage.prototype.getConfig = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* Config */]);
     };
-    HomePage.prototype.isButtonToggle = function () {
-        this.buttonClicked = !this.buttonClicked;
+    HomePage.prototype.isButtonToggle = function (x) {
+        switch (x) {
+            case 1:
+                this.buttonClicked1 = !this.buttonClicked1;
+                break;
+            case 2:
+                this.buttonClicked2 = !this.buttonClicked2;
+                break;
+        }
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/'<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row class="rowconfig">\n\n    <button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>\n\n    <ion-col class="colconfig">\n\n      <button ion-button clear small block [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()">100 Enviadas</button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button clear small block [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()">50 Recebidas</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-list>\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/'<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row class="rowconfig">\n\n    <button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>\n\n    <ion-col class="colconfig">\n\n      <button ion-button clear small block [color]="!buttonClicked1 ? \'gray\' : \'dark\'" (click)="isButtonToggle(1)">100 Enviadas</button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button clear small block [color]="!buttonClicked2 ? \'gray\' : \'dark\'" (click)="isButtonToggle(2)">50 Recebidas</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-list>\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
 ], HomePage);
@@ -42049,9 +42057,9 @@ var Login = (function () {
 Login = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/'<!--\n\n  Generated template for the Login page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding class="background">\n\n\n\n  <ion-row>\n\n    <ion-col class="logocol">\n\n      <img class="logo" src="./img/pombalembrancas.png">\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <button ion-button full ion-button icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>\n\n  <button ion-button full color="danger" ion-button icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" full color="light" [navPush]="feedPage">Cadastrar</button>\n\n      </ion-col>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" full color="light" [navPush]="logarPage">Logar</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button clear full color="white" [navPush]="saibaPage">Saiba Mais</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col class="textocol">\n\n      <p>Para se cadastrar você precisa aceitar nossos\n\n        <span [navPush]="termosPage">Termos de Serviço</span> e <span [navPush]="politicaPage">Política de Privacidade</span>\n\n      </p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/'<!--\n\n  Generated template for the Login page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding class="background">\n\n\n\n  <ion-row>\n\n    <ion-col class="logocol">\n\n      <img class="logo" src="./img/ecarriertitle3.png">\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <button ion-button block icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>\n\n  <button ion-button block color="danger" icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>\n\n\n\n    <ion-row>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" block color="white" [navPush]="feedPage">Cadastrar</button>\n\n      </ion-col>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" block color="white" [navPush]="logarPage">Logar</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button clear full color="white" [navPush]="saibaPage">Saiba Mais</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col class="textocol">\n\n      <p>Para se cadastrar você precisa aceitar nossos\n\n        <span [navPush]="termosPage">Termos de Serviço</span> e <span [navPush]="politicaPage">Política de Privacidade</span>\n\n      </p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */]])
 ], Login);
 
 //# sourceMappingURL=login.js.map
@@ -45181,12 +45189,11 @@ var Feed = (function () {
 Feed = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
+        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Feed);
 
-var _a, _b;
 //# sourceMappingURL=feed.js.map
 
 /***/ }),
@@ -45242,7 +45249,7 @@ var Logar = (function () {
 Logar = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
+        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Logar);
@@ -56887,7 +56894,6 @@ Ajuda = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__senhamodal_senhamodal__ = __webpack_require__(111);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Config; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56900,7 +56906,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
+/*import { Senhamodal } from '../senhamodal/senhamodal';*/
 /**
  * Generated class for the Config page.
  *
@@ -56908,26 +56914,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var Config = (function () {
-    function Config(navCtrl, navParams, modalCtrl) {
+    function Config(navCtrl, navParams /*public modalCtrl: ModalController*/) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
+        this.navParams = navParams; /*public modalCtrl: ModalController*/
     }
     Config.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Config');
-    };
-    Config.prototype.showModal = function () {
-        var modalSenha = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__senhamodal_senhamodal__["a" /* Senhamodal */]);
-        modalSenha.present();
     };
     return Config;
 }());
 Config = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n\n  Generated template for the Config page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Configurações\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row full>\n\n    <ion-col>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Data de Nascimento</ion-label>\n\n          <ion-select>\n\n            <ion-option selected="true">Dia</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Mês</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Ano</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-segment color="dark">\n\n            <ion-segment-button value="Homem">Homem</ion-segment-button>\n\n            <ion-segment-button value="Mulher">Mulher</ion-segment-button>\n\n          </ion-segment>\n\n        </ion-item>\n\n          <button ion-button outline block color="white">Alterar Foto de Perfil</button>\n\n          <button ion-button outline block color="white" (click)="showModal()">Alterar Senha</button>\n\n      </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
+        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n\n  Generated template for the Config page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Configurações\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row full>\n\n    <ion-col>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Data de Nascimento</ion-label>\n\n          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-segment color="dark">\n\n            <ion-segment-button value="Homem">Homem</ion-segment-button>\n\n            <ion-segment-button value="Mulher">Mulher</ion-segment-button>\n\n          </ion-segment>\n\n        </ion-item>\n\n          <button ion-button block color="danger">Salvar Configurações</button>\n\n      </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] /*public modalCtrl: ModalController*/])
 ], Config);
 
 //# sourceMappingURL=config.js.map
@@ -56975,7 +56976,7 @@ var Esqueceu = (function () {
 Esqueceu = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-esqueceu',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/'<!--\n\n  Generated template for the Esqueceu page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Esqueceu a Senha</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row align-itens-center>\n\n  <ion-col>\n\n    <p class="texto">Por favor, digite seu email que em breve enviaremos um email para você alterar sua senha.</p>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top bottom">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogin()">Recuperar Senha</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/,
+        selector: 'page-esqueceu',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/'<!--\n\n  Generated template for the Esqueceu page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Esqueceu a Senha</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row align-itens-center>\n\n  <ion-col>\n\n    <p class="texto">Por favor, digite seu email que em breve enviaremos um email para você alterar sua senha.</p>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top bottom">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogin()">Recuperar Senha</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Esqueceu);
@@ -57103,7 +57104,9 @@ var Senhamodal = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
-        this.isSenhaView = true;
+        this.isSenhaView1 = true;
+        this.isSenhaView2 = true;
+        this.isSenhaView3 = true;
     }
     Senhamodal.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad Senhamodal');
@@ -57111,15 +57114,25 @@ var Senhamodal = (function () {
     Senhamodal.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
-    Senhamodal.prototype.toggleSenhaView = function () {
-        this.isSenhaView = !this.isSenhaView;
+    Senhamodal.prototype.toggleSenhaView = function (x) {
+        switch (x) {
+            case 1:
+                this.isSenhaView1 = !this.isSenhaView1;
+                break;
+            case 2:
+                this.isSenhaView2 = !this.isSenhaView2;
+                break;
+            case 3:
+                this.isSenhaView3 = !this.isSenhaView3;
+                break;
+        }
     };
     return Senhamodal;
 }());
 Senhamodal = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n\n  Generated template for the Senhamodal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Alterar Senha</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only small clear (click)="closeModal()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-input placeholder="Senha antiga" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
+        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n\n  Generated template for the Senhamodal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Alterar Senha</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only small clear (click)="closeModal()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-input placeholder="Senha antiga" [type]="isSenhaView1 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(1)"><ion-icon [name]="isSenhaView1 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Senha nova" [type]="isSenhaView2 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(2)"><ion-icon [name]="isSenhaView2 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView3 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(3)"><ion-icon [name]="isSenhaView3 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ViewController */]])
 ], Senhamodal);
@@ -57209,7 +57222,7 @@ var Timeline = (function () {
 Timeline = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n\n  Generated template for the Timeline page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>timeline</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
+        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n\n  Generated template for the Timeline page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Lembranças\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="background">\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], Timeline);
@@ -78809,7 +78822,6 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/senhamodal/senhamodal.module#SenhamodalModule', name: 'Senhamodal', segment: 'senhamodal', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/config/config.module#ConfigModule', name: 'Config', segment: 'config', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/esqueceu/esqueceu.module#EsqueceuModule', name: 'Esqueceu', segment: 'esqueceu', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/logar/logar.module#LogarModule', name: 'Logar', segment: 'logar', priority: 'low', defaultHistory: [] },
@@ -78819,7 +78831,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/politica/politica.module#PoliticaModule', name: 'Politica', segment: 'politica', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginModule', name: 'Login', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/ajuda/ajuda.module#AjudaModule', name: 'Ajuda', segment: 'ajuda', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/timeline/timeline.module#TimelineModule', name: 'Timeline', segment: 'timeline', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/timeline/timeline.module#TimelineModule', name: 'Timeline', segment: 'timeline', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/senhamodal/senhamodal.module#SenhamodalModule', name: 'Senhamodal', segment: 'senhamodal', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -105166,6 +105179,7 @@ function CordovaFiniteObservable(opts) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ajuda_ajuda__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timeline_timeline__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_senhamodal_senhamodal__ = __webpack_require__(111);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -105184,9 +105198,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 ;
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
+    function MyApp(platform, statusBar, splashScreen, modalCtrl) {
+        this.modalCtrl = modalCtrl;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* Login */];
         this.homePage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         this.ajudaPage = __WEBPACK_IMPORTED_MODULE_6__pages_ajuda_ajuda__["a" /* Ajuda */];
@@ -105202,12 +105219,16 @@ var MyApp = (function () {
     MyApp.prototype.openPage = function (p) {
         this.rootPage = p;
     };
+    MyApp.prototype.showModal = function () {
+        var modalSenha = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_8__pages_senhamodal_senhamodal__["a" /* Senhamodal */]);
+        modalSenha.present();
+    };
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/'<ion-menu [content]="menu">\n\n  <ion-content class="background-menu">\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitemtopo" (click)="openPage(homePage)" ><ion-icon name="person"></ion-icon>Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(timePage)"><ion-icon name="people"></ion-icon>Timeline</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage()"><ion-icon name="cart"></ion-icon>Carrinho de Compras</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(ajudaPage)"><ion-icon name="help"></ion-icon>Ajuda</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitembot" (click)="openPage(loginPage)"><ion-icon name="close-circle"></ion-icon>Sair</button>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n\n\n<ion-nav #menu [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/'<ion-menu [content]="menu">\n\n  <ion-content class="background-menu">\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitemtopo" (click)="openPage(homePage)" ><ion-icon name="person"></ion-icon>Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(timePage)"><ion-icon name="people"></ion-icon>Lembranças</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" ><ion-icon name="cart"></ion-icon>Carrinho de Compras</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(ajudaPage)"><ion-icon name="help"></ion-icon>Ajuda</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="showModal()"><ion-icon name="settings"></ion-icon>Alterar Senha</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem"><ion-icon name="shirt"></ion-icon>Alterar Imagem de Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitembot" (click)="openPage(loginPage)"><ion-icon name="close-circle"></ion-icon>Sair</button>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n\n\n<ion-nav #menu [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map

@@ -25,10 +25,10 @@
   <ion-row class="rowconfig">
     <button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>
     <ion-col class="colconfig">
-      <button ion-button clear small block [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()">100 Enviadas</button>
+      <button ion-button clear small block [color]="!buttonClicked1 ? 'gray' : 'dark'" (click)="isButtonToggle(1)">100 Enviadas</button>
     </ion-col>
     <ion-col>
-      <button ion-button clear small block [color]="!buttonClicked ? 'light' : 'dark'" (click)="isButtonToggle()">50 Recebidas</button>
+      <button ion-button clear small block [color]="!buttonClicked2 ? 'gray' : 'dark'" (click)="isButtonToggle(2)">50 Recebidas</button>
     </ion-col>
   </ion-row>
 

@@ -1,7 +1,11 @@
 page-config {
   .background{
-    background-color: #008080;
-    box-shadow: inset 0px 0px 60vw black;
+    /*background-color: #008080;
+    box-shadow: inset 0px 0px 60vw black;*/
+    background-image: url(../img/ecarrier2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .header button{

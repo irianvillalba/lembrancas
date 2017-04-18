@@ -1,12 +1,11 @@
 page-login {
   .background{
-    background: color($colors,lembrancas, base);
-    padding-top: 12vw;
+    background: #FFFFFF;
     background-image: url(../img/lembrancas4.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0px 0px 60vw black;
+    box-shadow: inset 0px 0px 150px 35px black;
   }
 
   .logo{
@@ -19,8 +18,8 @@ page-login {
 
   .logocol{
     text-align: center;
-    margin-top: 10vw;
-    margin-bottom: 20vw;
+    margin-top: 20vw;
+    margin-bottom: 10vw;
   }
 
   .textocol{

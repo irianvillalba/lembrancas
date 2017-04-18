@@ -16,8 +16,11 @@
 // automatically applied to the <body> element in the app.
 
 .background-menu{
-  background-color: #003366;
-  box-shadow: inset 0px 0px 60vw black;
+  /*box-shadow: inset 0px 0px 60vw black;*/
+  background-image: url(../img/ecarrier3.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .menuitemtopo{

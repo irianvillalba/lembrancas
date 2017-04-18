@@ -1,7 +1,11 @@
 page-home {
   .background{
-    background-color: #008080;
-    box-shadow: inset 0px 0px 60vw black;
+    /*background-color: #008080;
+    box-shadow: inset 0px 0px 60vw black;*/
+    background-image: url(../img/ecarrier2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .header button{
@@ -43,15 +47,24 @@ page-home {
     background-color: transparent;
   }
 
+  .card{
+      width:100%;
+      margin: 10px 0px;
+  }
+
   .buttonconfig{
-    border-radius:5px;
-    margin-bottom:4vw;
+    margin-bottom:2vw;
   }
 
   .rowconfig{
-    background-color: #ffffff;
+    /*background-color: #FF6666	;*/
+    background: -webkit-radial-gradient(circle, #FFFFFF 0%, rgba(255, 0, 0, 0) 100%);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width:100%;
     padding:2vw;
+
   }
 
   .colconfig{

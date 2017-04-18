@@ -25,9 +25,21 @@ export class Senhamodal {
     this.viewCtrl.dismiss();
   }
 
-  isSenhaView : boolean = true;
-  toggleSenhaView():void{
-    this.isSenhaView = !this.isSenhaView;
+  isSenhaView1 : boolean = true;
+  isSenhaView2 : boolean = true;
+  isSenhaView3 : boolean = true;
+  toggleSenhaView(x):void{
+    switch(x){
+      case 1:
+        this.isSenhaView1 = !this.isSenhaView1;
+        break;
+      case 2:
+        this.isSenhaView2 = !this.isSenhaView2;
+        break;
+      case 3:
+        this.isSenhaView3 = !this.isSenhaView3;
+        break;
+    }
   }
 
 }

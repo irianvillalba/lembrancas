@@ -9,7 +9,8 @@ import { Config } from '../config/config';
 })
 export class HomePage {
 
-  buttonClicked : boolean = false;
+  buttonClicked1 : boolean = false;
+  buttonClicked2 : boolean = false;
 
 
   constructor(public navCtrl: NavController) {
@@ -20,8 +21,15 @@ export class HomePage {
     this.navCtrl.setRoot(Config);
   }
 
-  isButtonToggle():void{
-    this.buttonClicked = !this.buttonClicked;
+  isButtonToggle(x):void{
+    switch(x){
+      case 1:
+        this.buttonClicked1 = !this.buttonClicked1;        
+        break;
+      case 2:
+        this.buttonClicked2 = !this.buttonClicked2;
+        break;
+    }
   }
 
 }
