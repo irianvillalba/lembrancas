@@ -33,7 +33,7 @@
   <ion-row full>
     <ion-col>
       <ion-list>
-        <ion-item>
+        <ion-item class="top">
           <ion-input placeholder="Alterar Nome" clearInput></ion-input>
         </ion-item>
         <ion-item>
@@ -44,10 +44,16 @@
           <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
         </ion-item>
         <ion-item>
-          <ion-segment color="dark">
-            <ion-segment-button value="Homem">Homem</ion-segment-button>
-            <ion-segment-button value="Mulher">Mulher</ion-segment-button>
-          </ion-segment>
+          <ion-label icon-left color="primary"><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-label>
+          <ion-toggle color="primary" checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label icon-left color="twitter"><ion-icon name="logo-twitter"></ion-icon>Twitter</ion-label>
+          <ion-toggle color="twitter" checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item class="bottom">
+          <ion-label icon-left color="instagram"><ion-icon name="logo-instagram"></ion-icon>Instagram</ion-label>
+          <ion-toggle checked="false" color="instagram"></ion-toggle>
         </ion-item>
           <button ion-button block color="danger">Salvar Configurações</button>
       </ion-list>

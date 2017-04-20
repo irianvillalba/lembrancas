@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Config } from '../config/config';
+/*import { Config } from '../config/config';*/
 
 @Component({
   selector: 'page-home',
@@ -17,14 +17,14 @@ export class HomePage {
 
   }
 
-  getConfig(){
+  /*getConfig(){
     this.navCtrl.setRoot(Config);
-  }
+  }*/
 
   isButtonToggle(x):void{
     switch(x){
       case 1:
-        this.buttonClicked1 = !this.buttonClicked1;        
+        this.buttonClicked1 = !this.buttonClicked1;
         break;
       case 2:
         this.buttonClicked2 = !this.buttonClicked2;

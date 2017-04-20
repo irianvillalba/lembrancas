@@ -2,7 +2,7 @@ page-timeline {
   .background{
     /*background-color: #008080;
     box-shadow: inset 0px 0px 60vw black;*/
-    background-image: url(../img/ecarrier1.jpg);
+    background-image: url(../img/background2.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,6 +10,7 @@ page-timeline {
 
   .header button{
     color:white;
+    text-shadow: 0px 0px 4px black;
   }
 
   .header::after {
@@ -30,5 +31,6 @@ page-timeline {
   .toolbar-title{
     color:white;
     background-color: transparent;
+    text-shadow: 0px 0px 4px black;
   }
 }
