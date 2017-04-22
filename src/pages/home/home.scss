@@ -1,11 +1,16 @@
 page-home {
   .background{
-    background-color: #008080;
-    box-shadow: inset 0px 0px 60vw black;
+    /*background-color: #008080;
+    box-shadow: inset 0px 0px 60vw black;*/
+    background-image: url(../img/background10.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .header button{
     color:white;
+    text-shadow: 0px 0px 4px black;
   }
 
   .header::after {
@@ -23,12 +28,20 @@ page-home {
     }
   }
 
+  .toolbar-title{
+    color:white;
+    background-color: transparent;
+    text-shadow: 0px 0px 4px black;
+  }
+
   .divfoto{
     text-align: center;
+    text-shadow: 0px 0px 4px black;
+    color: #FFFFFF;
   }
 
   .foto{
-    border-radius:30vw;
+    border-radius:50%;
     height:40vw;
     width:40vw;
     border:2px solid #ffffff;
@@ -38,26 +51,32 @@ page-home {
     background-repeat: no-repeat;
   }
 
-  .toolbar-title{
-    color:white;
-    background-color: transparent;
+
+  .card{
+      width:100%;
+      margin: 10px 0px;
   }
 
   .buttonconfig{
-    border-radius:5px;
-    margin-bottom:4vw;
+    margin-bottom:2vw;
+  }
+
+  .datatexto{
+    font-size:3vw;
   }
 
   .rowconfig{
-    background-color: #ffffff;
+    /*background-color: #FF6666	;*/
+    background: -webkit-radial-gradient(circle, black 0%, rgba(255, 0, 0, 0) 100%);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width:100%;
     padding:2vw;
   }
 
   .colconfig{
-    border-right:2px solid #4682B4;
+    border-right:2px solid #f4f4f4;
   }
-
-
 
 }

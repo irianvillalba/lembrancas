@@ -1,10 +1,10 @@
 page-esqueceu {
   .background{
-    background-image: url(../img/lembrancas4.jpg);
+    background-image: url(../img/background6.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0px 0px 60vw black;
+    /*box-shadow: inset 0px 0px 150px 35px black;*/
   }
 
   .header button{
@@ -23,6 +23,7 @@ page-esqueceu {
 
   .toolbar-title{
     color:white;
+    text-shadow: 0px 0px 4px black;
   }
 
   .top{
@@ -43,5 +44,6 @@ page-esqueceu {
     color:white;
     font-size:6vw;
     text-align:center;
+    text-shadow: 0px 0px 4px black;
   }
 }

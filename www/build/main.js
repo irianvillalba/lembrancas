@@ -1,34 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	var parentJsonpFunction = window["webpackJsonp"];
-/******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules, executeModules) {
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [], result;
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId])
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(chunkIds, moreModules, executeModules);
-/******/ 		while(resolves.length)
-/******/ 			resolves.shift()();
-/******/
-/******/ 	};
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// objects to store loaded and loading chunks
-/******/ 	var installedChunks = {
-/******/ 		11: 0
-/******/ 	};
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -54,49 +26,6 @@
 /******/ 		return module.exports;
 /******/ 	}
 /******/
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		if(installedChunks[chunkId] === 0)
-/******/ 			return Promise.resolve();
-/******/
-/******/ 		// an Promise means "currently loading".
-/******/ 		if(installedChunks[chunkId]) {
-/******/ 			return installedChunks[chunkId][2];
-/******/ 		}
-/******/ 		// start chunk loading
-/******/ 		var head = document.getElementsByTagName('head')[0];
-/******/ 		var script = document.createElement('script');
-/******/ 		script.type = 'text/javascript';
-/******/ 		script.charset = 'utf-8';
-/******/ 		script.async = true;
-/******/ 		script.timeout = 120000;
-/******/
-/******/ 		if (__webpack_require__.nc) {
-/******/ 			script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + ".main.js";
-/******/ 		var timeout = setTimeout(onScriptComplete, 120000);
-/******/ 		script.onerror = script.onload = onScriptComplete;
-/******/ 		function onScriptComplete() {
-/******/ 			// avoid mem leaks in IE.
-/******/ 			script.onerror = script.onload = null;
-/******/ 			clearTimeout(timeout);
-/******/ 			var chunk = installedChunks[chunkId];
-/******/ 			if(chunk !== 0) {
-/******/ 				if(chunk) chunk[1](new Error('Loading chunk ' + chunkId + ' failed.'));
-/******/ 				installedChunks[chunkId] = undefined;
-/******/ 			}
-/******/ 		};
-/******/
-/******/ 		var promise = new Promise(function(resolve, reject) {
-/******/ 			installedChunks[chunkId] = [resolve, reject];
-/******/ 		});
-/******/ 		installedChunks[chunkId][2] = promise;
-/******/
-/******/ 		head.appendChild(script);
-/******/ 		return promise;
-/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -132,9 +61,6 @@
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "build/";
-/******/
-/******/ 	// on error function for async loading
-/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 315);
@@ -6239,7 +6165,7 @@ var SystemJsNgModuleLoader = (function () {
         if (exportName === undefined) {
             exportName = 'default';
         }
-        return __webpack_require__(114)(module)
+        return __webpack_require__(106)(module)
             .then(function (module) { return module[exportName]; })
             .then(function (type) { return checkNotEmpty(type, module, exportName); })
             .then(function (type) { return _this._compiler.compileModuleAsync(type); });
@@ -6255,7 +6181,7 @@ var SystemJsNgModuleLoader = (function () {
             exportName = 'default';
             factoryClassSuffix = '';
         }
-        return __webpack_require__(114)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
+        return __webpack_require__(106)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
             .then(function (module) { return module[exportName + factoryClassSuffix]; })
             .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
     };
@@ -22568,14 +22494,14 @@ function dispatch(timeStamp, r, w) {
 /* unused harmony reexport Menu */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_119__components_menu_menu_close__ = __webpack_require__(163);
 /* unused harmony reexport MenuClose */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_17__components_menu_menu_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_17__components_menu_menu_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_120__components_menu_menu_toggle__ = __webpack_require__(164);
 /* unused harmony reexport MenuToggle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__components_menu_menu_types__ = __webpack_require__(263);
 /* unused harmony reexport MenuType */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__components_modal_modal__ = __webpack_require__(168);
 /* unused harmony reexport Modal */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_18__components_modal_modal_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_18__components_modal_modal_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__components_nav_nav__ = __webpack_require__(78);
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_124__components_nav_nav_pop__ = __webpack_require__(76);
@@ -22679,25 +22605,25 @@ function dispatch(timeStamp, r, w) {
 /* unused harmony reexport setupConfig */
 /* unused harmony reexport ConfigToken */
 /* unused harmony reexport DomController */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_22__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* unused harmony reexport Haptic */
 /* unused harmony reexport DeepLinker */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_169__navigation_ionic_page__ = __webpack_require__(281);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_169__navigation_ionic_page__["a"]; });
+/* unused harmony reexport IonicPage */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__ = __webpack_require__(20);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_170__navigation_nav_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_171__navigation_nav_controller_base__ = __webpack_require__(50);
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_172__navigation_nav_params__ = __webpack_require__(21);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_172__navigation_nav_params__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_172__navigation_nav_params__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_173__navigation_nav_util__ = __webpack_require__(26);
 /* unused harmony reexport DeepLinkMetadata */
 /* unused harmony reexport DeepLinkMetadataFactory */
 /* unused harmony reexport UrlSerializer */
 /* unused harmony reexport DeepLinkConfigToken */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_174__navigation_view_controller__ = __webpack_require__(5);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_174__navigation_view_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_174__navigation_view_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_175__components_action_sheet_action_sheet_component__ = __webpack_require__(55);
 /* unused harmony reexport ActionSheetCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_176__components_alert_alert_component__ = __webpack_require__(57);
@@ -40345,7 +40271,6 @@ if (!exports.root) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(107);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -40358,25 +40283,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
+/*import { Config } from '../config/config';*/
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.buttonClicked = false;
+        this.buttonClicked1 = false;
+        this.buttonClicked2 = false;
     }
-    HomePage.prototype.getConfig = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* Config */]);
-    };
-    HomePage.prototype.isButtonToggle = function () {
-        this.buttonClicked = !this.buttonClicked;
+    /*getConfig(){
+      this.navCtrl.setRoot(Config);
+    }*/
+    HomePage.prototype.isButtonToggle = function (x) {
+        switch (x) {
+            case 1:
+                this.buttonClicked1 = !this.buttonClicked1;
+                break;
+            case 2:
+                this.buttonClicked2 = !this.buttonClicked2;
+                break;
+        }
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/'<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row class="rowconfig">\n\n    <button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>\n\n    <ion-col class="colconfig">\n\n      <button ion-button clear small block [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()">100 Enviadas</button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button clear small block [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()">50 Recebidas</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-list>\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button icon-only outline small icon-left [color]="!buttonClicked ? \'light\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/'<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n<!--CARDS TIMELINE-->\n\n\n\n  <ion-row class="rowconfig">\n\n    <!--<button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>-->\n\n    <ion-col class="colconfig">\n\n      <button ion-button clear small block [color]="!buttonClicked1 ? \'gray\' : \'white\'" (click)="isButtonToggle(1)">100 Enviadas</button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button clear small block [color]="!buttonClicked2 ? \'gray\' : \'white\'" (click)="isButtonToggle(2)">50 Recebidas</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-list>\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n          <span class="datatexto">18/04/2017</span>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button outline small [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n          <span class="datatexto">18/04/2017</span>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button outline small [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n          <span class="datatexto">18/04/2017</span>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button outline small [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n    <ion-card>\n\n      <img src="./img/card1.jpg">\n\n      <ion-card-content>\n\n        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>\n\n        <ion-item no-padding>\n\n          <ion-avatar item-left>\n\n            <img src="./img/gus2016.jpg">\n\n          </ion-avatar>\n\n          <p>Gustavo Andrade</p>\n\n          <span class="datatexto">18/04/2017</span>\n\n        </ion-item>\n\n        <ion-item no-padding>\n\n            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>\n\n            <button item-right ion-button outline small [color]="!buttonClicked ? \'gray\' : \'dark\'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
@@ -41991,11 +41924,11 @@ function flattenUnsubscriptionErrors(errors) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__feed_feed__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__termos_termos__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__saiba_saiba__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__politica_politica__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__logar_logar__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__feed_feed__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__termos_termos__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__saiba_saiba__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__politica_politica__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__logar_logar__ = __webpack_require__(54);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Login; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -42047,11 +41980,10 @@ var Login = (function () {
     return Login;
 }());
 Login = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/'<!--\n\n  Generated template for the Login page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding class="background">\n\n\n\n  <ion-row>\n\n    <ion-col class="logocol">\n\n      <img class="logo" src="./img/pombalembrancas.png">\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <button ion-button full ion-button icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>\n\n  <button ion-button full color="danger" ion-button icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" full color="light" [navPush]="feedPage">Cadastrar</button>\n\n      </ion-col>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" full color="light" [navPush]="logarPage">Logar</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button clear full color="white" [navPush]="saibaPage">Saiba Mais</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col class="textocol">\n\n      <p>Para se cadastrar você precisa aceitar nossos\n\n        <span [navPush]="termosPage">Termos de Serviço</span> e <span [navPush]="politicaPage">Política de Privacidade</span>\n\n      </p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/'<!--\n\n  Generated template for the Login page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding class="background">\n\n\n\n  <ion-row>\n\n    <ion-col class="logocol">\n\n      <img class="logo" src="./img/logo2.png">\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <button ion-button block icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>\n\n  <button ion-button block color="danger" icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>\n\n\n\n    <ion-row>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" block color="white" [navPush]="feedPage">Cadastrar</button>\n\n      </ion-col>\n\n      <ion-col col>\n\n        <button ion-button class="buttonfull" block color="white" [navPush]="logarPage">Logar</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button clear full color="white" [navPush]="saibaPage">Saiba Mais</button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col class="textocol">\n\n      <p>Para se cadastrar você precisa aceitar nossos\n\n        <span [navPush]="termosPage">Termos de Serviço</span> e <span [navPush]="politicaPage">Política de Privacidade</span>\n\n      </p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\login\login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]])
 ], Login);
 
 //# sourceMappingURL=login.js.map
@@ -45132,128 +45064,6 @@ function TransitionController_tsickle_Closure_declarations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__logar_logar__ = __webpack_require__(53);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Feed; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the Feed page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Feed = (function () {
-    function Feed(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.loginPage = __WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* Login */];
-        this.homePage = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
-        this.logarPage = __WEBPACK_IMPORTED_MODULE_4__logar_logar__["a" /* Logar */];
-        this.isSenhaView = true;
-    }
-    Feed.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Feed');
-    };
-    Feed.prototype.getLogar = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
-    };
-    Feed.prototype.toggleSenhaView = function () {
-        this.isSenhaView = !this.isSenhaView;
-    };
-    return Feed;
-}());
-Feed = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
-], Feed);
-
-var _a, _b;
-//# sourceMappingURL=feed.js.map
-
-/***/ }),
-/* 53 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__esqueceu_esqueceu__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__feed_feed__ = __webpack_require__(52);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Logar; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the Logar page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Logar = (function () {
-    function Logar(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.esqueceuPage = __WEBPACK_IMPORTED_MODULE_3__esqueceu_esqueceu__["a" /* Esqueceu */];
-        this.feedPage = __WEBPACK_IMPORTED_MODULE_4__feed_feed__["a" /* Feed */];
-        this.isSenhaView = true;
-    }
-    Logar.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Logar');
-    };
-    Logar.prototype.getLogar = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
-    };
-    Logar.prototype.toggleSenhaView = function () {
-        this.isSenhaView = !this.isSenhaView;
-    };
-    return Logar;
-}());
-Logar = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Logar);
-
-//# sourceMappingURL=logar.js.map
-
-/***/ }),
-/* 54 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["e"] = get;
 /* harmony export (immutable) */ __webpack_exports__["a"] = getPromise;
 /* harmony export (immutable) */ __webpack_exports__["b"] = getPlugin;
@@ -45325,6 +45135,125 @@ var cordovaWarn = function (pluginName, method) {
     }
 };
 //# sourceMappingURL=util.js.map
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__logar_logar__ = __webpack_require__(54);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Feed; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the Feed page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Feed = (function () {
+    function Feed(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.loginPage = __WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* Login */];
+        this.homePage = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
+        this.logarPage = __WEBPACK_IMPORTED_MODULE_4__logar_logar__["a" /* Logar */];
+        this.isSenhaView = true;
+    }
+    Feed.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Feed');
+    };
+    Feed.prototype.getLogar = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+    };
+    Feed.prototype.toggleSenhaView = function () {
+        this.isSenhaView = !this.isSenhaView;
+    };
+    return Feed;
+}());
+Feed = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-feed',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/'<!--\n\n  Generated template for the Feed page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Cadastro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row>\n\n  <ion-col offset-8>\n\n    <button ion-button clear color="white" [navPush]="logarPage">Entrar</button>\n\n  </ion-col>\n\n</ion-row>\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Nome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input placeholder="Sobrenome" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Cadastrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\feed\feed.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Feed);
+
+//# sourceMappingURL=feed.js.map
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__esqueceu_esqueceu__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__feed_feed__ = __webpack_require__(53);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Logar; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the Logar page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Logar = (function () {
+    function Logar(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.esqueceuPage = __WEBPACK_IMPORTED_MODULE_3__esqueceu_esqueceu__["a" /* Esqueceu */];
+        this.feedPage = __WEBPACK_IMPORTED_MODULE_4__feed_feed__["a" /* Feed */];
+        this.isSenhaView = true;
+    }
+    Logar.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Logar');
+    };
+    Logar.prototype.getLogar = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    };
+    Logar.prototype.toggleSenhaView = function () {
+        this.isSenhaView = !this.isSenhaView;
+    };
+    return Logar;
+}());
+Logar = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-logar',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/'<!--\n\n  Generated template for the Logar page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Entrar com Email</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row no-padding>\n\n  <ion-col col col-4 no-padding>\n\n    <button ion-button clear color="white" [navPush]="feedPage">Cadastrar</button>\n\n  </ion-col>\n\n  <ion-col col col-4 offset-1 no-padding>\n\n    <button ion-button clear color="white" [navPush]="esqueceuPage">Esqueceu a senha?</button>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item class="bottom">\n\n      <ion-input placeholder="Senha" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogar()">Entrar</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\logar\logar.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Logar);
+
+//# sourceMappingURL=logar.js.map
 
 /***/ }),
 /* 55 */
@@ -56837,387 +56766,6 @@ exports.isFunction = isFunction;
 
 /***/ }),
 /* 106 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ajuda; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the Ajuda page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Ajuda = (function () {
-    function Ajuda(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Ajuda.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Ajuda');
-    };
-    return Ajuda;
-}());
-Ajuda = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-ajuda',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/'<!--\n\n  Generated template for the Ajuda page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ajuda</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Ajuda);
-
-//# sourceMappingURL=ajuda.js.map
-
-/***/ }),
-/* 107 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__senhamodal_senhamodal__ = __webpack_require__(111);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Config; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the Config page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Config = (function () {
-    function Config(navCtrl, navParams, modalCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
-    }
-    Config.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Config');
-    };
-    Config.prototype.showModal = function () {
-        var modalSenha = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__senhamodal_senhamodal__["a" /* Senhamodal */]);
-        modalSenha.present();
-    };
-    return Config;
-}());
-Config = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n\n  Generated template for the Config page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Configurações\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row full>\n\n    <ion-col>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Data de Nascimento</ion-label>\n\n          <ion-select>\n\n            <ion-option selected="true">Dia</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Mês</ion-option>\n\n          </ion-select>\n\n          <ion-select>\n\n            <ion-option selected="true">Ano</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-segment color="dark">\n\n            <ion-segment-button value="Homem">Homem</ion-segment-button>\n\n            <ion-segment-button value="Mulher">Mulher</ion-segment-button>\n\n          </ion-segment>\n\n        </ion-item>\n\n          <button ion-button outline block color="white">Alterar Foto de Perfil</button>\n\n          <button ion-button outline block color="white" (click)="showModal()">Alterar Senha</button>\n\n      </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
-], Config);
-
-//# sourceMappingURL=config.js.map
-
-/***/ }),
-/* 108 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(43);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Esqueceu; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the Esqueceu page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Esqueceu = (function () {
-    function Esqueceu(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Esqueceu.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Esqueceu');
-    };
-    Esqueceu.prototype.getLogin = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* Login */]);
-    };
-    return Esqueceu;
-}());
-Esqueceu = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-esqueceu',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/'<!--\n\n  Generated template for the Esqueceu page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Esqueceu a Senha</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row align-itens-center>\n\n  <ion-col>\n\n    <p class="texto">Por favor, digite seu email que em breve enviaremos um email para você alterar sua senha.</p>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top bottom">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" full large color="danger" (click)="getLogin()">Recuperar Senha</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Esqueceu);
-
-//# sourceMappingURL=esqueceu.js.map
-
-/***/ }),
-/* 109 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Politica; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the Politica page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Politica = (function () {
-    function Politica(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Politica.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Politica');
-    };
-    return Politica;
-}());
-Politica = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-politica',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\politica\politica.html"*/'<!--\n\n  Generated template for the Politica page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Política de Privacidade</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\politica\politica.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Politica);
-
-//# sourceMappingURL=politica.js.map
-
-/***/ }),
-/* 110 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Saiba; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the Saiba page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Saiba = (function () {
-    function Saiba(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Saiba.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Saiba');
-    };
-    return Saiba;
-}());
-Saiba = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-saiba',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\saiba\saiba.html"*/'<!--\n\n  Generated template for the Saiba page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Saiba Mais</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\saiba\saiba.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Saiba);
-
-//# sourceMappingURL=saiba.js.map
-
-/***/ }),
-/* 111 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Senhamodal; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the Senhamodal page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Senhamodal = (function () {
-    function Senhamodal(navCtrl, navParams, viewCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.isSenhaView = true;
-    }
-    Senhamodal.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Senhamodal');
-    };
-    Senhamodal.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
-    };
-    Senhamodal.prototype.toggleSenhaView = function () {
-        this.isSenhaView = !this.isSenhaView;
-    };
-    return Senhamodal;
-}());
-Senhamodal = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n\n  Generated template for the Senhamodal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Alterar Senha</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only small clear (click)="closeModal()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-input placeholder="Senha antiga" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="light" (click)="toggleSenhaView()"><ion-icon [name]="isSenhaView ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ViewController */]])
-], Senhamodal);
-
-//# sourceMappingURL=senhamodal.js.map
-
-/***/ }),
-/* 112 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Termos; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the Termos page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Termos = (function () {
-    function Termos(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Termos.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Termos');
-    };
-    return Termos;
-}());
-Termos = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-termos',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\termos\termos.html"*/'<!--\n\n  Generated template for the Termos page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Termos de Serviço</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\termos\termos.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Termos);
-
-//# sourceMappingURL=termos.js.map
-
-/***/ }),
-/* 113 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Timeline; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the Timeline page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var Timeline = (function () {
-    function Timeline(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    Timeline.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Timeline');
-    };
-    return Timeline;
-}());
-Timeline = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n\n  Generated template for the Timeline page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>timeline</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-], Timeline);
-
-//# sourceMappingURL=timeline.js.map
-
-/***/ }),
-/* 114 */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -57226,21 +56774,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 114;
+webpackEmptyContext.id = 106;
 
 
 /***/ }),
-/* 115 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(108);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__decorators__ = __webpack_require__(255);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(52);
 /* unused harmony namespace reexport */
 
 
@@ -57248,11 +56796,11 @@ webpackEmptyContext.id = 114;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 116 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bootstrap__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
@@ -57564,12 +57112,12 @@ function wrapInstance(pluginObj, methodName, opts) {
 //# sourceMappingURL=plugin.js.map
 
 /***/ }),
-/* 117 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(107);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplashScreen; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57644,12 +57192,12 @@ var SplashScreen = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 118 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(107);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatusBar; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57838,6 +57386,385 @@ var StatusBar = (function () {
     return StatusBar;
 }());
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 111 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ajuda; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Ajuda page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Ajuda = (function () {
+    function Ajuda(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Ajuda.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Ajuda');
+    };
+    return Ajuda;
+}());
+Ajuda = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-ajuda',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/'<!--\n\n  Generated template for the Ajuda page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Ajuda\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="background">\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\ajuda\ajuda.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Ajuda);
+
+//# sourceMappingURL=ajuda.js.map
+
+/***/ }),
+/* 112 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Config; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*import { Senhamodal } from '../senhamodal/senhamodal';*/
+/**
+ * Generated class for the Config page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Config = (function () {
+    function Config(navCtrl, navParams /*public modalCtrl: ModalController*/) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams; /*public modalCtrl: ModalController*/
+    }
+    Config.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Config');
+    };
+    return Config;
+}());
+Config = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-config',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/'<!--\n\n  Generated template for the Config page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Configurações\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="background">\n\n  <ion-row>\n\n    <ion-col>\n\n    </ion-col>\n\n    <ion-col class="divfoto">\n\n      <div class="foto">\n\n      </div>\n\n      <h3>Gustavo Andrade</h3>\n\n    </ion-col>\n\n    <ion-col>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row full>\n\n    <ion-col>\n\n      <ion-list>\n\n        <ion-item class="top">\n\n          <ion-input placeholder="Alterar Nome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-input placeholder="Alterar Sobrenome" clearInput></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Data de Nascimento</ion-label>\n\n          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label icon-left color="primary"><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-label>\n\n          <ion-toggle color="primary" checked="false"></ion-toggle>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label icon-left color="twitter"><ion-icon name="logo-twitter"></ion-icon>Twitter</ion-label>\n\n          <ion-toggle color="twitter" checked="false"></ion-toggle>\n\n        </ion-item>\n\n        <ion-item class="bottom">\n\n          <ion-label icon-left color="instagram"><ion-icon name="logo-instagram"></ion-icon>Instagram</ion-label>\n\n          <ion-toggle checked="false" color="instagram"></ion-toggle>\n\n        </ion-item>\n\n          <button ion-button block color="danger">Salvar Configurações</button>\n\n      </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\config\config.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] /*public modalCtrl: ModalController*/])
+], Config);
+
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+/* 113 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(43);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Esqueceu; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the Esqueceu page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Esqueceu = (function () {
+    function Esqueceu(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Esqueceu.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Esqueceu');
+    };
+    Esqueceu.prototype.getLogin = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* Login */]);
+    };
+    return Esqueceu;
+}());
+Esqueceu = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-esqueceu',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/'<!--\n\n  Generated template for the Esqueceu page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header clear>\n\n  <ion-navbar class="header">\n\n    <ion-title>Esqueceu a Senha</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="feed, background">\n\n\n\n<ion-row align-itens-center>\n\n  <ion-col>\n\n    <p class="texto">Por favor, digite seu email que em breve enviaremos um email para você alterar sua senha.</p>\n\n  </ion-col>\n\n</ion-row>\n\n\n\n  <ion-list>\n\n    <ion-item class="top bottom">\n\n      <ion-input placeholder="E-mail" clearInput></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button class="buttonrad" block color="danger" (click)="getLogin()">Recuperar Senha</button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\esqueceu\esqueceu.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Esqueceu);
+
+//# sourceMappingURL=esqueceu.js.map
+
+/***/ }),
+/* 114 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Politica; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Politica page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Politica = (function () {
+    function Politica(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Politica.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Politica');
+    };
+    return Politica;
+}());
+Politica = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-politica',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\politica\politica.html"*/'<!--\n\n  Generated template for the Politica page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Política de Privacidade</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\politica\politica.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Politica);
+
+//# sourceMappingURL=politica.js.map
+
+/***/ }),
+/* 115 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Saiba; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Saiba page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Saiba = (function () {
+    function Saiba(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Saiba.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Saiba');
+    };
+    return Saiba;
+}());
+Saiba = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-saiba',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\saiba\saiba.html"*/'<!--\n\n  Generated template for the Saiba page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Saiba Mais</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\saiba\saiba.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Saiba);
+
+//# sourceMappingURL=saiba.js.map
+
+/***/ }),
+/* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Senhamodal; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the Senhamodal page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Senhamodal = (function () {
+    function Senhamodal(navCtrl, navParams, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.isSenhaView1 = true;
+        this.isSenhaView2 = true;
+        this.isSenhaView3 = true;
+    }
+    Senhamodal.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Senhamodal');
+    };
+    Senhamodal.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    Senhamodal.prototype.toggleSenhaView = function (x) {
+        switch (x) {
+            case 1:
+                this.isSenhaView1 = !this.isSenhaView1;
+                break;
+            case 2:
+                this.isSenhaView2 = !this.isSenhaView2;
+                break;
+            case 3:
+                this.isSenhaView3 = !this.isSenhaView3;
+                break;
+        }
+    };
+    return Senhamodal;
+}());
+Senhamodal = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-senhamodal',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/'<!--\n\n  Generated template for the Senhamodal page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Alterar Senha</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only small clear (click)="closeModal()">\n\n        <ion-icon name="close"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="background">\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-input placeholder="Senha antiga" [type]="isSenhaView1 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(1)"><ion-icon [name]="isSenhaView1 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Senha nova" [type]="isSenhaView2 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(2)"><ion-icon [name]="isSenhaView2 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-input placeholder="Confirmar senha nova" [type]="isSenhaView3 ? \'password\' : \'text\'">\n\n      </ion-input>\n\n      <button ion-button icon-only item-right clear color="gray" (click)="toggleSenhaView(3)"><ion-icon [name]="isSenhaView3 ? \'eye\' : \'eye-off\'"></ion-icon>\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button block color="danger">Salvar Nova Senha</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\senhamodal\senhamodal.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ViewController */]])
+], Senhamodal);
+
+//# sourceMappingURL=senhamodal.js.map
+
+/***/ }),
+/* 117 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Termos; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Termos page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Termos = (function () {
+    function Termos(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Termos.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Termos');
+    };
+    return Termos;
+}());
+Termos = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-termos',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\termos\termos.html"*/'<!--\n\n  Generated template for the Termos page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Termos de Serviço</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <p> Teste teste\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\termos\termos.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Termos);
+
+//# sourceMappingURL=termos.js.map
+
+/***/ }),
+/* 118 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Timeline; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the Timeline page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var Timeline = (function () {
+    function Timeline(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    Timeline.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Timeline');
+    };
+    return Timeline;
+}());
+Timeline = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-timeline',template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/'<!--\n\n  Generated template for the Timeline page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header class="header">\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Lembranças\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="background">\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\pages\timeline\timeline.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
+], Timeline);
+
+//# sourceMappingURL=timeline.js.map
 
 /***/ }),
 /* 119 */
@@ -78487,66 +78414,15 @@ module.exports = g;
 
 /***/ }),
 /* 250 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var map = {
-	"../pages/ajuda/ajuda.module": [
-		316,
-		10
-	],
-	"../pages/config/config.module": [
-		317,
-		9
-	],
-	"../pages/esqueceu/esqueceu.module": [
-		318,
-		8
-	],
-	"../pages/feed/feed.module": [
-		319,
-		7
-	],
-	"../pages/logar/logar.module": [
-		320,
-		6
-	],
-	"../pages/login/login.module": [
-		321,
-		5
-	],
-	"../pages/politica/politica.module": [
-		322,
-		4
-	],
-	"../pages/saiba/saiba.module": [
-		323,
-		3
-	],
-	"../pages/senhamodal/senhamodal.module": [
-		324,
-		2
-	],
-	"../pages/termos/termos.module": [
-		325,
-		1
-	],
-	"../pages/timeline/timeline.module": [
-		326,
-		0
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-module.exports = webpackAsyncContext;
-webpackAsyncContext.id = 250;
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 250;
 
 
 /***/ }),
@@ -78743,21 +78619,21 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_feed_feed__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_feed_feed__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_termos_termos__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_saiba_saiba__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_politica_politica__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_logar_logar__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_esqueceu_esqueceu__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_config_config__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ajuda_ajuda__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_timeline_timeline__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_senhamodal_senhamodal__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_termos_termos__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_saiba_saiba__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_politica_politica__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_logar_logar__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_esqueceu_esqueceu__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_config_config__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ajuda_ajuda__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_timeline_timeline__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_senhamodal_senhamodal__ = __webpack_require__(116);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -78807,21 +78683,7 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/senhamodal/senhamodal.module#SenhamodalModule', name: 'Senhamodal', segment: 'senhamodal', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/config/config.module#ConfigModule', name: 'Config', segment: 'config', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/esqueceu/esqueceu.module#EsqueceuModule', name: 'Esqueceu', segment: 'esqueceu', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/logar/logar.module#LogarModule', name: 'Logar', segment: 'logar', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/feed/feed.module#FeedModule', name: 'Feed', segment: 'feed', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/termos/termos.module#TermosModule', name: 'Termos', segment: 'termos', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/saiba/saiba.module#SaibaModule', name: 'Saiba', segment: 'saiba', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/politica/politica.module#PoliticaModule', name: 'Politica', segment: 'politica', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginModule', name: 'Login', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/ajuda/ajuda.module#AjudaModule', name: 'Ajuda', segment: 'ajuda', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/timeline/timeline.module#TimelineModule', name: 'Timeline', segment: 'timeline', priority: 'low', defaultHistory: [] }
-                ]
-            })
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */])
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
@@ -104883,8 +104745,8 @@ function checkReady() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__ = __webpack_require__(304);
@@ -105160,12 +105022,14 @@ function CordovaFiniteObservable(opts) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ajuda_ajuda__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timeline_timeline__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ajuda_ajuda__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timeline_timeline__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_senhamodal_senhamodal__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_config_config__ = __webpack_require__(112);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -105184,14 +105048,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 ;
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
+    function MyApp(platform, statusBar, splashScreen, modalCtrl) {
+        this.modalCtrl = modalCtrl;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* Login */];
         this.homePage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         this.ajudaPage = __WEBPACK_IMPORTED_MODULE_6__pages_ajuda_ajuda__["a" /* Ajuda */];
         this.timePage = __WEBPACK_IMPORTED_MODULE_7__pages_timeline_timeline__["a" /* Timeline */];
         this.loginPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* Login */];
+        this.configPage = __WEBPACK_IMPORTED_MODULE_9__pages_config_config__["a" /* Config */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -105202,12 +105071,16 @@ var MyApp = (function () {
     MyApp.prototype.openPage = function (p) {
         this.rootPage = p;
     };
+    MyApp.prototype.showModal = function () {
+        var modalSenha = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_8__pages_senhamodal_senhamodal__["a" /* Senhamodal */]);
+        modalSenha.present();
+    };
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/'<ion-menu [content]="menu">\n\n  <ion-content class="background-menu">\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitemtopo" (click)="openPage(homePage)" ><ion-icon name="person"></ion-icon>Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(timePage)"><ion-icon name="people"></ion-icon>Timeline</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage()"><ion-icon name="cart"></ion-icon>Carrinho de Compras</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(ajudaPage)"><ion-icon name="help"></ion-icon>Ajuda</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitembot" (click)="openPage(loginPage)"><ion-icon name="close-circle"></ion-icon>Sair</button>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n\n\n<ion-nav #menu [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/'<ion-menu [content]="menu">\n\n  <ion-content class="background-menu">\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitemtopo" (click)="openPage(homePage)" ><ion-icon name="person"></ion-icon>Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(timePage)"><ion-icon name="people"></ion-icon>Lembranças</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" ><ion-icon name="cart"></ion-icon>Créditos</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(ajudaPage)"><ion-icon name="help"></ion-icon>Ajuda</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="openPage(configPage)"><ion-icon start name="settings"></ion-icon>Configurações</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem" (click)="showModal()"><ion-icon name="settings"></ion-icon>Alterar Senha</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitem"><ion-icon name="shirt"></ion-icon>Alterar Imagem de Perfil</button>\n\n      <button ion-button icon-left block clear menuClose color="white" class="menuitembot" (click)="openPage(loginPage)"><ion-icon name="close-circle"></ion-icon>Sair</button>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n\n\n<ion-nav #menu [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Ionic\lembrancas-master\lembrancas\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -111727,7 +111600,7 @@ function PanRecognizer_tsickle_Closure_declarations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = IonicPage;
+/* unused harmony export IonicPage */
 /**
  * \@name IonicPage
  * \@description
@@ -114872,3 +114745,5 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 /***/ })
 /******/ ]);
 //# sourceMappingURL=main.js.map
+
+(function(w){var i=w.Ionic=w.Ionic||{};i.version='3.0.1';i.angular='4.0.0';})(window);

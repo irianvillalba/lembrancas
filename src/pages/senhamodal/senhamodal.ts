@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 /**
  * Generated class for the Senhamodal page.
@@ -7,7 +7,7 @@ import { ViewController } from 'ionic-angular';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+
 @Component({
   selector: 'page-senhamodal',
   templateUrl: 'senhamodal.html',
@@ -25,9 +25,21 @@ export class Senhamodal {
     this.viewCtrl.dismiss();
   }
 
-  isSenhaView : boolean = true;
-  toggleSenhaView():void{
-    this.isSenhaView = !this.isSenhaView;
+  isSenhaView1 : boolean = true;
+  isSenhaView2 : boolean = true;
+  isSenhaView3 : boolean = true;
+  toggleSenhaView(x):void{
+    switch(x){
+      case 1:
+        this.isSenhaView1 = !this.isSenhaView1;
+        break;
+      case 2:
+        this.isSenhaView2 = !this.isSenhaView2;
+        break;
+      case 3:
+        this.isSenhaView3 = !this.isSenhaView3;
+        break;
+    }
   }
 
 }

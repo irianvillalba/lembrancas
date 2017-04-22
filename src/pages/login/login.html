@@ -11,20 +11,19 @@
 
   <ion-row>
     <ion-col class="logocol">
-      <img class="logo" src="./img/pombalembrancas.png">
+      <img class="logo" src="./img/logo2.png">
     </ion-col>
   </ion-row>
 
-  <button ion-button full ion-button icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>
-  <button ion-button full color="danger" ion-button icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>
-
+  <button ion-button block icon-left (click)="getLogar()"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>
+  <button ion-button block color="danger" icon-left (click)="getLogar()"><ion-icon name="logo-google"></ion-icon>Google</button>
 
     <ion-row>
       <ion-col col>
-        <button ion-button class="buttonfull" full color="light" [navPush]="feedPage">Cadastrar</button>
+        <button ion-button class="buttonfull" block color="white" [navPush]="feedPage">Cadastrar</button>
       </ion-col>
       <ion-col col>
-        <button ion-button class="buttonfull" full color="light" [navPush]="logarPage">Logar</button>
+        <button ion-button class="buttonfull" block color="white" [navPush]="logarPage">Logar</button>
       </ion-col>
     </ion-row>
 
