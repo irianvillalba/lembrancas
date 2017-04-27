@@ -10,13 +10,14 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-timeline',
-  templateUrl: 'timeline.html',
+  templateUrl: 'timeline.html',  
 })
 export class Timeline {
-
+    
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
+  } 
+       
+    
   ionViewDidLoad() {
     console.log('ionViewDidLoad Timeline');
   }
