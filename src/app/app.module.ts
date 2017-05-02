@@ -19,6 +19,8 @@ import { Ajuda } from '../pages/ajuda/ajuda';
 import { Timeline } from '../pages/timeline/timeline';
 import { CardComponent } from '../pages/timeline/card.component';
 import { Senhamodal } from '../pages/senhamodal/senhamodal';
+import { RecebeuComponent } from '../pages/home/recebeuComponent';
+import { EnviouComponent } from '../pages/home/enviouComponent';
 
  
 @NgModule({
@@ -36,7 +38,9 @@ import { Senhamodal } from '../pages/senhamodal/senhamodal';
     Ajuda,
     Timeline,
     Senhamodal,
-    CardComponent, 
+    CardComponent,
+    RecebeuComponent,
+    EnviouComponent,
    
   ],
   imports: [
@@ -59,6 +63,8 @@ import { Senhamodal } from '../pages/senhamodal/senhamodal';
     Timeline,
     Senhamodal,
     CardComponent,
+    RecebeuComponent,
+    EnviouComponent,
       
   ],
   providers: [
