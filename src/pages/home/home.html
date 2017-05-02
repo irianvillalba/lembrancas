@@ -1,113 +1,45 @@
 <ion-header class="header">
-  <ion-navbar>
-    <button ion-button menuToggle>
+    <ion-navbar>
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
-      Perfil
-    </ion-title>
-  </ion-navbar>
+        <ion-title>
+            Perfil
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content class="background">
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col class="divfoto">
-      <div class="foto">
-      </div>
-      <h3>Gustavo Andrade</h3>
-    </ion-col>
-    <ion-col>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col class="divfoto">
+            <div class="foto">
+            </div>
+            <h3>Gustavo Andrade</h3>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+    </ion-row>
 
-<!--CARDS TIMELINE-->
+    <!--SELEÇÃO DE TIMELINE E NÚMERO DE MENSAGENS-->
 
-  <ion-row class="rowconfig">
-    <!--<button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>-->
-    <ion-col class="colconfig">
-      <button ion-button clear small block [color]="!buttonClicked1 ? 'gray' : 'white'" (click)="isButtonToggle(1)">100 Enviadas</button>
-    </ion-col>
-    <ion-col>
-      <button ion-button clear small block [color]="!buttonClicked2 ? 'gray' : 'white'" (click)="isButtonToggle(2)">50 Recebidas</button>
-    </ion-col>
-  </ion-row>
+    <ion-row class="rowconfig">
+        <!--<button ion-button icon-left block color="light" class="buttonconfig" (click)="getConfig()"><ion-icon start name="settings"></ion-icon>Configurações</button>-->
+        <ion-col class="colconfig">
+            <button ion-button clear small block [color]="!buttonClicked1 ? 'gray' : 'white'" (click)="isButtonToggle(1)">100 Enviadas</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button clear small block [color]="!buttonClicked2 ? 'gray' : 'white'" (click)="isButtonToggle(2)">50 Recebidas</button>
+        </ion-col>
+    </ion-row>
 
-  <ion-list>
-    <ion-card>
-      <img src="./img/card1.jpg">
-      <ion-card-content>
-        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
-        <ion-item no-padding>
-          <ion-avatar item-left>
-            <img src="./img/gus2016.jpg">
-          </ion-avatar>
-          <p>Gustavo Andrade</p>
-          <span class="datatexto">18/04/2017</span>
-        </ion-item>
-        <ion-item no-padding>
-            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
-            <button item-right ion-button outline small [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
+    <!--CARDS TIMELINE-->
 
-    <ion-card>
-      <img src="./img/card1.jpg">
-      <ion-card-content>
-        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
-        <ion-item no-padding>
-          <ion-avatar item-left>
-            <img src="./img/gus2016.jpg">
-          </ion-avatar>
-          <p>Gustavo Andrade</p>
-          <span class="datatexto">18/04/2017</span>
-        </ion-item>
-        <ion-item no-padding>
-            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
-            <button item-right ion-button outline small [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <img src="./img/card1.jpg">
-      <ion-card-content>
-        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
-        <ion-item no-padding>
-          <ion-avatar item-left>
-            <img src="./img/gus2016.jpg">
-          </ion-avatar>
-          <p>Gustavo Andrade</p>
-          <span class="datatexto">18/04/2017</span>
-        </ion-item>
-        <ion-item no-padding>
-            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
-            <button item-right ion-button outline small [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <img src="./img/card1.jpg">
-      <ion-card-content>
-        <p wrap>sdjfuh osudfh osijdf osidf osdifj osidjf osidjf osdifj osdifj osidfj osdijf osidf oajsdoahsd oiasjdo aisjd</p>
-        <ion-item no-padding>
-          <ion-avatar item-left>
-            <img src="./img/gus2016.jpg">
-          </ion-avatar>
-          <p>Gustavo Andrade</p>
-          <span class="datatexto">18/04/2017</span>
-        </ion-item>
-        <ion-item no-padding>
-            <button item-left ion-button outline small icon-left [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="heart-outline"></ion-icon>Curtir</button>
-            <button item-right ion-button outline small [color]="!buttonClicked ? 'gray' : 'dark'" (click)="isButtonToggle()"><ion-icon name="share-alt"></ion-icon></button>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-
-  </ion-list>
+    <ion-list>
+        <enviouTemplate [cardEnviou]="enviouCard" *ngIf="buttonClicked1"></enviouTemplate>
+        <recebeuTemplate [cardRecebeu]="recebeuCard" *ngIf="buttonClicked2"></recebeuTemplate>
+    </ion-list>
 
 
 </ion-content>

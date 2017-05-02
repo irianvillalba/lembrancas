@@ -17,8 +17,12 @@ import { Esqueceu } from '../pages/esqueceu/esqueceu';
 import { Config } from '../pages/config/config';
 import { Ajuda } from '../pages/ajuda/ajuda';
 import { Timeline } from '../pages/timeline/timeline';
+import { CardComponent } from '../pages/timeline/card.component';
 import { Senhamodal } from '../pages/senhamodal/senhamodal';
+import { RecebeuComponent } from '../pages/home/recebeuComponent';
+import { EnviouComponent } from '../pages/home/enviouComponent';
 
+ 
 @NgModule({
   declarations: [
     MyApp,
@@ -34,6 +38,10 @@ import { Senhamodal } from '../pages/senhamodal/senhamodal';
     Ajuda,
     Timeline,
     Senhamodal,
+    CardComponent,
+    RecebeuComponent,
+    EnviouComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -54,6 +62,10 @@ import { Senhamodal } from '../pages/senhamodal/senhamodal';
     Ajuda,
     Timeline,
     Senhamodal,
+    CardComponent,
+    RecebeuComponent,
+    EnviouComponent,
+      
   ],
   providers: [
     StatusBar,
